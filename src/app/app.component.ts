@@ -13,6 +13,7 @@ import { AuthService } from "../providers/auth.service";
 import { SignupPage } from "../pages/signup/signup";
 import {SendMessagePage} from "../pages/send-message/send-message";
 import {ListMessagePage} from "../pages/list-message/list-message";
+import {DemoPage} from "../pages/demo/demo";
 
 @Component({
   templateUrl: 'app.html'
@@ -40,8 +41,10 @@ export class MyApp {
       { title: 'My First List', component: ListPage },
       { title: 'test page', component: TestPage },
       { title: 'signup page', component: SignupPage },
-      {title: 'sendmessage page', component: SendMessagePage},
-      {title: 'listmessage page', component: ListMessagePage}
+      { title: 'sendmessage page', component: SendMessagePage},
+      { title: 'listmessage page', component: ListMessagePage},
+      { title: 'demo page', component: DemoPage},
+
 
     ];
   }

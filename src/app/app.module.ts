@@ -24,6 +24,7 @@ import {AngularFirestoreModule} from "angularfire2/firestore";
 import { FirestoreProvider } from '../providers/firestore/firestore';
 import {SendMessagePage} from "../pages/send-message/send-message";
 import {ListMessagePage} from "../pages/list-message/list-message";
+import {DemoPage} from "../pages/demo/demo";
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import {ListMessagePage} from "../pages/list-message/list-message";
     LoginPage,
     SignupPage,
     SendMessagePage,
-    ListMessagePage
+    ListMessagePage,
+    DemoPage
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,8 @@ import {ListMessagePage} from "../pages/list-message/list-message";
     LoginPage,
     SignupPage,
     SendMessagePage,
-    ListMessagePage
+    ListMessagePage,
+    DemoPage
   ],
   providers: [
     StatusBar,
