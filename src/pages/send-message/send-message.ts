@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {Message} from "../../models/message.interface";
 import {AuthService} from "../../providers/auth.service";
 import {FirestoreProvider} from "../../providers/firestore/firestore";
+import {Observable} from "rxjs/Observable";
 
 /**
  * Generated class for the SendMessagePage page.
@@ -18,7 +19,10 @@ import {FirestoreProvider} from "../../providers/firestore/firestore";
 })
 export class SendMessagePage {
 
+
   message: Message = new Message();
+  public chatMessages: Observable<Message[]>;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public auth: AuthService, public firestoreprovider: FirestoreProvider) {
       console.log(this.message);
 
@@ -30,8 +34,11 @@ export class SendMessagePage {
       console.log('message', this.message);
   }
 
+
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad SendMessagePage');
+    this.chatMessages = this.firestoreprovider.getMessages().valueChanges();
   }
 
 }

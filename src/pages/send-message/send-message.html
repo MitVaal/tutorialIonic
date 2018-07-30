@@ -13,4 +13,14 @@
     <ion-input [(ngModel)]="message.message"></ion-input>
     <button ion-button (click)="sendMessage()">Envoyer</button>
 
+    <ion-card *ngFor="let message of chatMessages | async">
+        <ion-card-header>
+            {{ message.email }}
+        </ion-card-header>
+        <ion-card-content>
+            text: {{ message.message }}
+        </ion-card-content>
+
+    </ion-card>
+
 </ion-content>
