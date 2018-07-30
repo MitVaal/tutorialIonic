@@ -5,7 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: 'hello-ionic.html'
 })
 export class HelloIonicPage {
-  constructor() {
+  name:string;
 
+  constructor() {
+    this.name = 'Olivier';
   }
 }

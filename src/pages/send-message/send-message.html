@@ -1,0 +1,16 @@
+
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>SendMessage</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-input [(ngModel)]="message.message"></ion-input>
+    <button ion-button (click)="sendMessage()">Envoyer</button>
+
+</ion-content>
